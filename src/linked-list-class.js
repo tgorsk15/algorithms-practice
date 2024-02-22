@@ -13,12 +13,14 @@ export class LinkedList {
 
    append(chosenValue) {
     const newNode = new Node(chosenValue);
+    newNode.value = chosenValue;
+    console.log(newNode.value);
     console.log(newNode);
     return newNode
     
    }
 };
 
-console.log('hi');
+
 
 
