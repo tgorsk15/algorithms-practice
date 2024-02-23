@@ -8,3 +8,8 @@ const testRun = new LinkedList;
 testRun.append(56);
 
 testRun.prepend(444);
+
+testRun.prepend('nextNode should be 444')
+
+testRun.prepend('nextNode should be text!');
+
