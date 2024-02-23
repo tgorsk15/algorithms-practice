@@ -2,68 +2,116 @@ import { Node } from "./node-class";
 
 
 console.log(Node);
+
 // eslint-disable-next-line import/prefer-default-export
-export class LinkedList {
-    constructor (head, tail, length) {
-        this.head = head;
-        this.tail = tail;
-        this.length = 0;
+export const linkedList2 = function () {
+    const length = 0;
+    let head = null;
+    const tail = null;
+
+    function prepend(val) {
+        const newNode = new Node(val, head);
+        // newNode.value = val;
+        console.log(newNode);
+
+        if (head === null) {
+            head = newNode;
+            return head
+        }
+
+        // save data from old head
+
+
+        // head = newNode;
     }
 
-   append(chosenValue) {
-    const newNode = new Node();
-    newNode.value = chosenValue;
-    console.log(newNode);
-    
-
-    this.tail = newNode;
-    this.tail.nextNode = null;
-    console.log(this.tail.value);
-    console.log(this.tail.nextNode);
-
-    // need to somehow change the preceding node's 'nextNode' value here to the
-    // newly added node's value
-
-    this.length += 1;
-    console.log(this.length) 
-
-    return this.tail
-    
-   }
 
 
-   prepend(chosenValue) {
-    let oldHead;
-    // transfer data from old head:
-    if (this.head) {
-        oldHead = this.head;
-        console.log(oldHead.nextNode);
+    function append() {
+
     }
-    console.log(oldHead);
+
+
+
+    return { prepend,
+        append }
+
+}
+
+
+
+// eslint-disable-next-line import/prefer-default-export
+// export class LinkedList {
+//     constructor (head, tail, length) {
+//         this.head = head;
+//         this.tail = tail;
+//         this.length = 0;
+//     }
+
+//    append(chosenValue) {
+//     // transfer old tail info:
+//     let oldTail;
+//     if (this.tail !== undefined) {
+//         oldTail = this.tail;
+//         console.log(oldTail);
+//     };
+
+//     this.length += 1;
+//     console.log(this.length)
+
+//     const newNode = new Node();
+//     newNode.value = chosenValue;
+//     console.log(newNode);
+//     // set index value of ndoe
+//     newNode.index = this.length;
+
+//     this.tail = newNode;
+//     this.tail.nextNode = null;
+//     console.log(this.tail);
+//     // change nextNode of the old tail:
+//     if (oldTail !== undefined) {
+//         oldTail.nextNode = this.tail.value;
+//         console.log(oldTail);
+//     }
     
 
-    const newNode = new Node();
-    newNode.value = chosenValue;
-    // console.log(newNode);
+//     return this.tail
+    
+//    }
 
-    this.head = newNode;
 
-    console.log(this.tail);
 
-    if (this.length < 2) {
-        this.head.nextNode = this.tail.value
-    } else {
-        this.head.nextNode = oldHead.value;
-    }
-    console.log(this.head);
+//    prepend(chosenValue) {
+//     console.log(this.head)
+//     let oldHead;
+//     // transfer data from old head:
+//     if (this.head !== undefined) {
+//         oldHead = this.head;
+//     }
+//     console.log(oldHead);
+    
 
-    this.length += 1;
-    console.log(this.length);
+//     const newNode = new Node();
+//     newNode.value = chosenValue;
+//     // update head:
+//     this.head = newNode;
 
-    return this.head
+//     console.log(this.tail);
 
-   }
-};
+//     if (this.length < 2) {
+//         this.head.nextNode = this.tail.value;
+//     } else {
+//         this.head.nextNode = oldHead.value;
+//     }
+//     console.log(this.head);
+
+//     this.length += 1;
+//     console.log(this.length);
+
+//     return this.head
+
+//    }
+// };
 
 
 
