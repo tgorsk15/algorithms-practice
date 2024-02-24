@@ -107,7 +107,7 @@ export const linkedList2 = function () {
 
         // runs until a match is found or end of list is reached
         while (counter !== index) {
-            pointer =pointer.nextNode;
+            pointer = pointer.nextNode;
             counter += 1;
 
             if (pointer === null) {
@@ -118,6 +118,22 @@ export const linkedList2 = function () {
 
         console.log(pointer);
         return pointer
+
+    }
+
+
+    function doesContain(val) {
+        let pointer = head;
+
+        while (pointer.value !== val) {
+            pointer = pointer.nextNode
+            if (pointer === null) {
+                console.log('value not found');
+                return false
+            }
+        };
+        console.log('found!');
+        return true
 
     }
 
@@ -136,7 +152,8 @@ export const linkedList2 = function () {
         returnTail,
         popTail,
         traverseList, 
-        atIndex }
+        atIndex,
+        doesContain }
 
 }
 

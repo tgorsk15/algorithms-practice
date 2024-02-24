@@ -27,9 +27,9 @@ testRun.returnHead();
 // testRun.returnTail();
 testRun.append(33);
 // testRun.returnTail();
-
+testRun.append('hey there');
 testRun.append(69);
-testRun.append('last one for now!');
+testRun.append('last one gets deleted');
 
 testRun.getSize();
 testRun.popTail();
@@ -43,5 +43,9 @@ testRun.traverseList();
 // testRun.returnTail();
 
 testRun.atIndex(6);
-testRun.atIndex(1)
+testRun.atIndex(1);
 
+
+testRun.doesContain('hi');
+testRun.doesContain(69);
+testRun.doesContain('hey there')
