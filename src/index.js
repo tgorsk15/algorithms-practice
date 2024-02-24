@@ -18,7 +18,7 @@ const testRun = new linkedList2();
 
 
 testRun.prepend(45);
-// testRun.returnHead();
+
 
 testRun.prepend(46);
 testRun.returnHead();
@@ -33,7 +33,8 @@ testRun.append(69);
 testRun.getSize();
 
 
-// testRun.popTail()
+testRun.popTail()
 
 testRun.traverseList();
+testRun.returnTail();
 

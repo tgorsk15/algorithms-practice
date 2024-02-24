@@ -47,6 +47,7 @@ export const linkedList2 = function () {
         tail.nextNode = null;
         length += 1;
         console.log(length)
+        console.log(tail);
         return tail
     }
 
@@ -66,15 +67,6 @@ export const linkedList2 = function () {
         return tail
     }
 
-    function popTail() {
-        // work on getting pointer to work to navigate to last node and pop it
-        let pointer = head;
-        // remove:
-        pointer = tail;
-
-        console.log(pointer);
-    }
-
     function traverseList() {
         let pointer = head;
 
@@ -83,6 +75,32 @@ export const linkedList2 = function () {
             pointer = pointer.nextNode;
         }
     }
+
+
+    function popTail() {
+        // work on getting pointer to work to navigate to last node and pop it
+        // have to reset new tail's nextNode to null after the old tail
+        // is popped
+        let pointer = head;
+        console.log(pointer);
+        console.log(tail);
+
+        while (pointer.nextNode !== tail) {
+            console.log(pointer.nextNode)
+            pointer = pointer.nextNode;
+        };
+
+        pointer.nextNode = null;
+        console.log(tail);
+        
+        // make new tail:
+        tail = pointer;
+        console.log(tail);
+        return tail
+
+    }
+
+    
 
 
 
