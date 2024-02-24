@@ -78,11 +78,7 @@ export const linkedList2 = function () {
 
 
     function popTail() {
-        // work on getting pointer to work to navigate to last node and pop it
-        // have to reset new tail's nextNode to null after the old tail
-        // is popped
         let pointer = head;
-        console.log(pointer);
         console.log(tail);
 
         while (pointer.nextNode !== tail) {
@@ -90,13 +86,38 @@ export const linkedList2 = function () {
             pointer = pointer.nextNode;
         };
 
+        // delete memory of tail:
         pointer.nextNode = null;
-        console.log(tail);
         
         // make new tail:
         tail = pointer;
         console.log(tail);
+
+        // shorten length
+        length -= 1;
+
         return tail
+
+    }
+
+
+    function atIndex(index) {
+        let counter = 0;
+        let pointer = head;
+
+        // runs until a match is found or end of list is reached
+        while (counter !== index) {
+            pointer =pointer.nextNode;
+            counter += 1;
+
+            if (pointer === null) {
+                console.log('not found');
+                return 
+            }
+        }
+
+        console.log(pointer);
+        return pointer
 
     }
 
@@ -114,84 +135,13 @@ export const linkedList2 = function () {
         returnHead,
         returnTail,
         popTail,
-        traverseList }
+        traverseList, 
+        atIndex }
 
 }
 
 
 
-// eslint-disable-next-line import/prefer-default-export
-// export class LinkedList {
-//     constructor (head, tail, length) {
-//         this.head = head;
-//         this.tail = tail;
-//         this.length = 0;
-//     }
-
-//    append(chosenValue) {
-//     // transfer old tail info:
-//     let oldTail;
-//     if (this.tail !== undefined) {
-//         oldTail = this.tail;
-//         console.log(oldTail);
-//     };
-
-//     this.length += 1;
-//     console.log(this.length)
-
-//     const newNode = new Node();
-//     newNode.value = chosenValue;
-//     console.log(newNode);
-//     // set index value of ndoe
-//     newNode.index = this.length;
-
-//     this.tail = newNode;
-//     this.tail.nextNode = null;
-//     console.log(this.tail);
-//     // change nextNode of the old tail:
-//     if (oldTail !== undefined) {
-//         oldTail.nextNode = this.tail.value;
-//         console.log(oldTail);
-//     }
-    
-
-//     return this.tail
-    
-//    }
-
-
-
-//    prepend(chosenValue) {
-//     console.log(this.head)
-//     let oldHead;
-//     // transfer data from old head:
-//     if (this.head !== undefined) {
-//         oldHead = this.head;
-//     }
-//     console.log(oldHead);
-    
-
-//     const newNode = new Node();
-//     newNode.value = chosenValue;
-//     // update head:
-//     this.head = newNode;
-
-//     console.log(this.tail);
-
-//     if (this.length < 2) {
-//         this.head.nextNode = this.tail.value;
-//     } else {
-//         this.head.nextNode = oldHead.value;
-//     }
-//     console.log(this.head);
-
-//     this.length += 1;
-//     console.log(this.length);
-
-//     return this.head
-
-//    }
-// };
 
 
 

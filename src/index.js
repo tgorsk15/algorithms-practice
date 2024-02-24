@@ -26,15 +26,22 @@ testRun.returnHead();
 
 // testRun.returnTail();
 testRun.append(33);
-testRun.returnTail();
+// testRun.returnTail();
 
 testRun.append(69);
+testRun.append('last one for now!');
 
 testRun.getSize();
+testRun.popTail();
+testRun.getSize();
 
-
-testRun.popTail()
+// testRun.getSize();
+// testRun.popTail();
+// testRun.getSize();
 
 testRun.traverseList();
-testRun.returnTail();
+// testRun.returnTail();
+
+testRun.atIndex(6);
+testRun.atIndex(1)
 
