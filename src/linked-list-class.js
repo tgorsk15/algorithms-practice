@@ -157,7 +157,19 @@ export const linkedList2 = function () {
         return index
     }
 
-    
+
+    function printList() {
+        let pointer = head;
+        let listString = ``;
+
+        while (pointer !== null) {
+            listString += `${pointer.value} -> `;
+            pointer = pointer.nextNode;
+        }
+        console.log(listString);
+        return listString
+
+    }
 
 
 
@@ -174,7 +186,8 @@ export const linkedList2 = function () {
         traverseList, 
         atIndex,
         doesContain,
-        find }
+        find,
+        printList }
 
 }
 

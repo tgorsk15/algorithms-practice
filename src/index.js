@@ -52,3 +52,5 @@ testRun.atIndex(1);
 
 testRun.find(69);
 testRun.find(72);
+
+testRun.printList()
