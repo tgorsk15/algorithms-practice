@@ -46,6 +46,9 @@ testRun.atIndex(6);
 testRun.atIndex(1);
 
 
-testRun.doesContain('hi');
-testRun.doesContain(69);
-testRun.doesContain('hey there')
+// testRun.doesContain('hi');
+// testRun.doesContain(69);
+// testRun.doesContain('hey there')
+
+testRun.find(69);
+testRun.find(72);
