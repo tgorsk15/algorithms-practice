@@ -30,8 +30,10 @@ export const linkedList2 = function () {
 
 
     function append(val) {
+        console.log(tail);
         const newNode = new Node(val, tail);
         console.log(newNode);
+        tail.nextNode = newNode;
 
         if (tail === null) {
             tail = newNode;

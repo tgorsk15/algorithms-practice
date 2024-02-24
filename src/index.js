@@ -28,8 +28,12 @@ testRun.returnHead();
 testRun.append(33);
 testRun.returnTail();
 
+testRun.append(69);
+
 testRun.getSize();
 
 
-testRun.popTail()
+// testRun.popTail()
+
+testRun.traverseList();
 
