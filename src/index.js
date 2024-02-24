@@ -1,5 +1,5 @@
 
-import { linkedList2 } from "./linked-list-class";
+import { linkedList2 } from "./linked-list";
 
 
 const testRun = new linkedList2();
@@ -24,19 +24,16 @@ testRun.popTail();
 testRun.getSize();
 
 testRun.traverseList();
-// testRun.returnTail();
+
 
 testRun.atIndex(6);
 testRun.atIndex(1);
 
-
-// testRun.doesContain('hi');
-// testRun.doesContain(69);
-// testRun.doesContain('hey there')
-
-// testRun.find(69);
-
-// testRun.printList()
+// test functions:
+testRun.doesContain('hi');
+testRun.doesContain('hey there')
+testRun.find(69);
+testRun.printList()
 
 
 testRun.insertAt(66, 10);
