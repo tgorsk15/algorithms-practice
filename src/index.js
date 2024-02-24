@@ -26,7 +26,10 @@ testRun.returnHead();
 
 // testRun.returnTail();
 testRun.append(33);
-// testRun.returnTail();
+testRun.returnTail();
 
 testRun.getSize();
+
+
+testRun.popTail()
 

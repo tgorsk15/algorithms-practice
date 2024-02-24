@@ -42,6 +42,7 @@ export const linkedList2 = function () {
         }
 
         tail = newNode;
+        tail.nextNode = null;
         length += 1;
         console.log(length)
         return tail
@@ -68,7 +69,17 @@ export const linkedList2 = function () {
         let pointer = head;
         // remove:
         pointer = tail;
+
         console.log(pointer);
+    }
+
+    function traverseList() {
+        let pointer = head;
+
+        while (pointer !== null) {
+            console.log(pointer);
+            pointer = pointer.nextNode;
+        }
     }
 
 
@@ -82,7 +93,8 @@ export const linkedList2 = function () {
         getSize,
         returnHead,
         returnTail,
-        popTail }
+        popTail,
+        traverseList }
 
 }
 
