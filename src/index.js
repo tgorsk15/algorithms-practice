@@ -15,5 +15,18 @@ const testRun = new linkedList2();
 
 // testRun.append(999);
 
+
+
 testRun.prepend(45);
+// testRun.returnHead();
+
+testRun.prepend(46);
+testRun.returnHead();
+
+
+// testRun.returnTail();
+testRun.append(33);
+// testRun.returnTail();
+
+testRun.getSize();
 

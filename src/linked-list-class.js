@@ -5,36 +5,84 @@ console.log(Node);
 
 // eslint-disable-next-line import/prefer-default-export
 export const linkedList2 = function () {
-    const length = 0;
+    let length = 0;
     let head = null;
-    const tail = null;
+    let tail = null;
 
     function prepend(val) {
         const newNode = new Node(val, head);
-        // newNode.value = val;
         console.log(newNode);
 
         if (head === null) {
             head = newNode;
-            return head
+            tail = newNode;
+            length += 1
+            return {head, tail, length}
         }
 
-        // save data from old head
 
-
-        // head = newNode;
+        head = newNode;
+        length += 1;
+        console.log(length);
+        return head
     }
 
 
 
-    function append() {
+    function append(val) {
+        const newNode = new Node(val, tail);
+        console.log(newNode);
 
+        if (tail === null) {
+            tail = newNode;
+            head = newNode;
+            length += 1;
+            
+            return {tail, head, length}
+        }
+
+        tail = newNode;
+        length += 1;
+        console.log(length)
+        return tail
     }
 
+
+    function getSize() {
+        console.log(length);
+        return length
+    }
+
+    function returnHead() {
+        console.log(head);
+        return head
+    }
+
+    function returnTail() {
+        console.log(tail);
+        return tail
+    }
+
+    function popTail() {
+        // work on getting pointer to work to navigate to last node and pop it
+        let pointer = head;
+        // remove:
+        pointer = tail;
+        console.log(pointer);
+    }
+
+
+
+    // for toString(), maybe use a while loop, iterate through each node
+    // until it becomes null
 
 
     return { prepend,
-        append }
+        append,
+        getSize,
+        returnHead,
+        returnTail,
+        popTail }
 
 }
 
