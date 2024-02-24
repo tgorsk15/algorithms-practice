@@ -172,6 +172,41 @@ export const linkedList2 = function () {
     }
 
 
+    function insertAt(val, index) {
+        if (index < 0) {
+            console.log('index needs to be above 0');
+            return
+        // eslint-disable-next-line no-else-return
+        } else if (index === 0) {
+            prepend(val);
+        } else if (index === length) {
+            append(val)
+        } else if (index > length) {
+            console.log('list not long enough. Try another index');
+            return
+        }
+
+        let pointer = head;
+        let indexCounter = 0;
+
+        while (indexCounter + 1 !== index) {
+            pointer = pointer.nextNode;
+            indexCounter += 1;          
+        };
+
+        const afterPointer = pointer.nextNode;
+        console.log(afterPointer);
+
+        const newNode = new Node(val, afterPointer);
+        pointer.nextNode = newNode;
+        console.log(pointer);
+
+
+        console.log(pointer.nextNode);
+
+    }
+
+
 
     // for toString(), maybe use a while loop, iterate through each node
     // until it becomes null
@@ -187,7 +222,8 @@ export const linkedList2 = function () {
         atIndex,
         doesContain,
         find,
-        printList }
+        printList,
+        insertAt }
 
 }
 

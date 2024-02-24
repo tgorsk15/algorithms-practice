@@ -3,18 +3,6 @@ import { linkedList2 } from "./linked-list-class";
 
 
 const testRun = new linkedList2();
-// console.log(testRun.append());
-
-// testRun.append(56);
-
-// testRun.prepend(444);
-
-// testRun.prepend('nextNode should be 444')
-
-// testRun.prepend('nextNode should be text!');
-
-// testRun.append(999);
-
 
 
 testRun.prepend(45);
@@ -35,10 +23,6 @@ testRun.getSize();
 testRun.popTail();
 testRun.getSize();
 
-// testRun.getSize();
-// testRun.popTail();
-// testRun.getSize();
-
 testRun.traverseList();
 // testRun.returnTail();
 
@@ -50,7 +34,13 @@ testRun.atIndex(1);
 // testRun.doesContain(69);
 // testRun.doesContain('hey there')
 
-testRun.find(69);
-testRun.find(72);
+// testRun.find(69);
 
-testRun.printList()
+// testRun.printList()
+
+
+testRun.insertAt(66, 10);
+testRun.insertAt(100, 3);
+
+testRun.insertAt(200, 4);
+testRun.traverseList();
